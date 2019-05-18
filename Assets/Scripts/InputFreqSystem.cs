@@ -39,14 +39,19 @@ public class InputFreqSystem : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {    
+    {
         // for the last n beats, we check whether the input was received during that period
         // we score 1 point for each beat where we received input.
         // we divide through by the number of beats that we have checked.
 
+        // we check until the end of the last full beat
+        float now = Time.time;
+        float timeIntoBeat = now % m_BeatPeriod;
+        float lastFullBeatEnd = now - timeIntoBeat;
+
         // initialise score and start of beat time
         int score = 0;
-        float beatStart = Time.time - (m_BeatPeriod * m_NumBeatsToPoll);
+        float beatStart = lastFullBeatEnd - (m_BeatPeriod * m_NumBeatsToPoll);
 
         // grab input buffer
         List<float> inputBuf = m_Input.m_Buffer;
