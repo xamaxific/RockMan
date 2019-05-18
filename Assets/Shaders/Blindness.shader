@@ -52,7 +52,7 @@
 				const float end = start + 0.05f;//0.45f;//;
 
 				float amt = 1 - ((max(dist - start, 0) / (end - start)) * .5);
-				return amt;
+				return clamp(amt, 0, 1);
 			}
 
             fixed4 frag (v2f i) : SV_Target
@@ -63,7 +63,14 @@
 				//float amt = max(calcVisibility(i.uv, float2(.4, .5)), calcVisibility(i.uv, float2(0.6, 0.5)));
 				float amt = calcVisibility(i.uv, float2(.5, .5));
 
-                col = (col * amt);
+				float greyVal = 0.299 * col.r + 0.587 * col.g + 0.114 * col.b;
+				float4 grey = float4(greyVal, greyVal, greyVal, col.a);
+
+				float greyAmt = max(0.5 - amt, 0) / .5;
+
+                col = amt * ((col * (1 - greyAmt)) + (grey * greyAmt)) ;// + (1 - amt) * grey;
+
+
                 return col;
             }
             ENDCG
