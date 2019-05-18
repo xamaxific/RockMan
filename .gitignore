@@ -1,3 +1,7 @@
 Library/
 Temp/
 Logs/
+.vs/
+RockMan.csproj
+RockMan.Editor.csproj
+RockMan.sln
