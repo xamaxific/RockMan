@@ -9,7 +9,7 @@ public class CameraBlindness : MonoBehaviour
     Material m_Mat;
 
     [SerializeField]
-    float m_SeeDist = 0.5f;
+    public float m_SeeDist = 0.5f;
 
     // Postprocess the image
     void OnRenderImage(RenderTexture source, RenderTexture destination)
