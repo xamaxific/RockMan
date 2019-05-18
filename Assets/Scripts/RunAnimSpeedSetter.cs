@@ -10,6 +10,9 @@ public class RunAnimSpeedSetter : MonoBehaviour
     [SerializeField]
     float m_SpeedScale = 1f;
 
+    [SerializeField]
+    float m_MaxSpeed = int.MaxValue;
+
     Vector3 m_LastPos;
 
     void Start()
@@ -22,7 +25,7 @@ public class RunAnimSpeedSetter : MonoBehaviour
     {
         // determine speed
         Vector3 pos = transform.position;
-        float speed = Mathf.Abs(pos.x - m_LastPos.x) * m_SpeedScale;
+        float speed = Mathf.Min(Mathf.Abs(pos.x - m_LastPos.x) * m_SpeedScale, m_MaxSpeed);
         m_LastPos = pos;
 
         // feed the animator
