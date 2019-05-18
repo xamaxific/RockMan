@@ -132,6 +132,10 @@ public class CurseManager : MonoBehaviour
                 m_ConfusionSwitchDelay = (m_Confusion == ConfusionLevel.High) ? m_HighConfusionSwitchPeriod : m_LowConfusionSwitchPeriod;
             }
         }
+        else
+        {
+            m_ConfusionSwitchCode = KeyCode.Space;
+        }
 
         // set value in text
         if (m_ControlText != null)
