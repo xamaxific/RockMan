@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PollInputSystem : MonoBehaviour
 {
+    public KeyCode m_TriggerKey = KeyCode.Space;
+
     // rolling buffer of presses, starting with the least recent
     public List<float> m_Buffer = new List<float>();    
 
@@ -21,7 +23,7 @@ public class PollInputSystem : MonoBehaviour
         }
 
         // store new press if applicable
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(m_TriggerKey))
         {
             m_Buffer.Add(now);
         }

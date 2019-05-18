@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CurseManager : MonoBehaviour
 {
@@ -14,10 +15,19 @@ public class CurseManager : MonoBehaviour
     Rigidbody2D m_Boulder;
 
     [SerializeField]
+    Text m_ControlText;
+
+    [SerializeField]
+    PollInputSystem m_InputSystem;
+
+    [SerializeField]
     float m_MinBoulderMass, m_MaxBoulderMass;
 
     [SerializeField]
     float m_MinBoulderScale, m_MaxBoulderScale;
+
+    [SerializeField]
+    float m_LowConfusionSwitchPeriod, m_HighConfusionSwitchPeriod;
 
     public enum BlindLevel
     {
@@ -34,11 +44,22 @@ public class CurseManager : MonoBehaviour
         Large
     }
 
+    public enum ConfusionLevel
+    {
+        None,
+        Low,
+        High
+    }
+
     float m_SeeDistTarg;
     float m_SeeDistCur;
 
     float m_BoulderScaleTarg;
     float m_BoulderScaleCur;
+
+    ConfusionLevel m_Confusion;
+    KeyCode m_ConfusionSwitchCode;
+    float m_ConfusionSwitchDelay;
 
     public void SetBlindLevel(BlindLevel lvl)
     {
@@ -62,6 +83,11 @@ public class CurseManager : MonoBehaviour
         }
     }
 
+    public void SetConfusionLevel(ConfusionLevel level)
+    {
+        m_Confusion = level;
+    }
+
     private void Start()
     {
         SetBlindLevel(BlindLevel.None);
@@ -69,6 +95,10 @@ public class CurseManager : MonoBehaviour
 
         SetBoulderSize(BoulderSize.Small);
         m_BoulderScaleCur = 0f;
+
+        SetConfusionLevel(ConfusionLevel.None);
+        m_ConfusionSwitchDelay = 0f;
+        m_ConfusionSwitchCode = KeyCode.Space;
     }
 
     private void Update()
@@ -89,6 +119,30 @@ public class CurseManager : MonoBehaviour
             m_Boulder.mass = m_MinBoulderMass + m_BoulderScaleCur * (m_MaxBoulderMass - m_MinBoulderMass);
             float scale = m_MinBoulderScale + m_BoulderScaleCur * (m_MaxBoulderScale - m_MinBoulderScale);
             m_Boulder.transform.localScale = new Vector3(scale, scale, scale);
+        }
+
+        // figure out what key is trigger
+        if (m_Confusion != ConfusionLevel.None)
+        {
+            m_ConfusionSwitchDelay -= Time.deltaTime;
+            if (m_ConfusionSwitchDelay <= 0)
+            {
+                int index = ((int)(UnityEngine.Random.value * 26)) % 26;
+                m_ConfusionSwitchCode = (KeyCode)((int)KeyCode.A + index);
+                m_ConfusionSwitchDelay = (m_Confusion == ConfusionLevel.High) ? m_HighConfusionSwitchPeriod : m_LowConfusionSwitchPeriod;
+            }
+        }
+
+        // set value in text
+        if (m_ControlText != null)
+        {
+            m_ControlText.text = m_ConfusionSwitchCode.ToString();
+        }
+
+        // set value in input
+        if (m_InputSystem != null)
+        {
+            m_InputSystem.m_TriggerKey = m_ConfusionSwitchCode;
         }
     }
 }

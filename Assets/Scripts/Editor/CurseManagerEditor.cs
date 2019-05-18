@@ -8,6 +8,7 @@ public class CurseManagerEditor : Editor
 {
     int m_Blindness;
     int m_Boulder;
+    int m_Confusion;
 
     public override void OnInspectorGUI()
     {
@@ -18,5 +19,8 @@ public class CurseManagerEditor : Editor
 
         m_Boulder = EditorGUILayout.Popup("Boulder", m_Boulder, new string[] { "Small", "Medium", "Large" }, new GUILayoutOption[0]);
         ((CurseManager)target).SetBoulderSize((CurseManager.BoulderSize)m_Boulder);
+
+        m_Confusion = EditorGUILayout.Popup("Confusion", m_Confusion, new string[] { "None", "Low", "High" }, new GUILayoutOption[0]);
+        ((CurseManager)target).SetConfusionLevel((CurseManager.ConfusionLevel)m_Confusion);
     }
 }
