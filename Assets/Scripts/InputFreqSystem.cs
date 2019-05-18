@@ -6,6 +6,8 @@ using System;
 [RequireComponent(typeof(PollInputSystem))]
 public class InputFreqSystem : MonoBehaviour
 {
+    public static InputFreqSystem s_Inst;
+
     // duration of each beat (secs)
     [SerializeField]
     float m_BeatPeriod = 0.5f;
@@ -22,7 +24,17 @@ public class InputFreqSystem : MonoBehaviour
 
     void Start()
     {
-        m_Input = GetComponent<PollInputSystem>();        
+        m_Input = GetComponent<PollInputSystem>();       
+    }
+
+    void OnEnable()
+    {
+        s_Inst = this;
+    }
+
+    void OnDisable()
+    {
+        s_Inst = null;
     }
 
     // Update is called once per frame
