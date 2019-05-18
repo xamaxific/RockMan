@@ -1049,6 +1049,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_StepSpeed: 0.01
   m_CamBlind: {fileID: 519420033}
+  m_Boulder: {fileID: 1383695704}
+  m_MinBoulderMass: 0.9
+  m_MaxBoulderMass: 1.1
+  m_MinBoulderScale: 0.75
+  m_MaxBoulderScale: 1.25
 --- !u!4 &1735482554
 Transform:
   m_ObjectHideFlags: 0
