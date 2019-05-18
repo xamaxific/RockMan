@@ -18,7 +18,7 @@ public class Follower : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
         if (m_Target == null)
         {
