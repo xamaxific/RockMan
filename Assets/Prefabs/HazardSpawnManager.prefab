@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3315195818006694541
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3315195818006694543}
+  - component: {fileID: 3315195818006694542}
+  m_Layer: 0
+  m_Name: HazardSpawnManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3315195818006694543
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315195818006694541}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.35, y: 0.38, z: -114.82031}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3315195818006694542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3315195818006694541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9a2b3f069e5cc644a78961be00a7757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hazards:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  player: {fileID: 0}
+  cp1: {fileID: 0}
+  cp2: {fileID: 0}
+  cp3: {fileID: 0}
+  cp4: {fileID: 0}
+  cp5: {fileID: 0}
+  cp6: {fileID: 0}
+  cp7: {fileID: 0}
+  cp8: {fileID: 0}
+  cp9: {fileID: 0}
+  cp10: {fileID: 0}
+  hz1: {x: 0, y: 0}
+  hz2: {x: 0, y: 0}
+  hz3: {x: 0, y: 0}
+  hz4: {x: 0, y: 0}
+  hz5: {x: 0, y: 0}
+  hz6: {x: 0, y: 0}
+  hz7: {x: 0, y: 0}
+  hz8: {x: 0, y: 0}
+  hz9: {x: 0, y: 0}
+  hz10: {x: 0, y: 0}
