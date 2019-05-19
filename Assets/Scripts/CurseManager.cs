@@ -29,6 +29,8 @@ public class CurseManager : MonoBehaviour
     [SerializeField]
     float m_LowConfusionSwitchPeriod, m_HighConfusionSwitchPeriod;
 
+    public static CurseManager s_Inst;
+
     public enum BlindLevel
     {
         None,
@@ -60,6 +62,16 @@ public class CurseManager : MonoBehaviour
     ConfusionLevel m_Confusion;
     KeyCode m_ConfusionSwitchCode;
     float m_ConfusionSwitchDelay;
+
+    private void OnEnable()
+    {
+        s_Inst = this;
+    }
+
+    private void OnDisable()
+    {
+        s_Inst = null;
+    }
 
     public void SetBlindLevel(BlindLevel lvl)
     {
