@@ -10,11 +10,17 @@ public class CameraPan : MonoBehaviour
     [SerializeField]
     float m_Tolerance = 10f;
 
+    [SerializeField]
+    bool m_OnlyMoveForwards = true;
+
+    float m_GracePeriod;
+
     // Start is called before the first frame update
     void Start()
     {
         // snap
         UpdatePos(tolerance: 0f);
+        m_GracePeriod = 1f;
     }
 
     // Update is called once per frame
@@ -41,6 +47,16 @@ public class CameraPan : MonoBehaviour
             {
                 Vector3 dir = diff / len;
                 Vector3 newPos = targPos - dir * tolerance;
+
+                // don't go back!
+                if (m_OnlyMoveForwards)
+                {
+                    m_GracePeriod -= Time.deltaTime;
+                    if (m_GracePeriod <= 0)
+                    {
+                        newPos.x = Mathf.Max(newPos.x, camPos.x);
+                    }
+                }
 
                 transform.position = newPos;
             }
