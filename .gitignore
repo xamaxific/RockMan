@@ -8,3 +8,4 @@ RockMan.sln
 Assembly-CSharp-Editor.csproj
 Assembly-CSharp.csproj
 Puppet2D.csproj
+build/
