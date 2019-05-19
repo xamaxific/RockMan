@@ -91,10 +91,6 @@ public class HazardSpawnManager : MonoBehaviour
         randomhaz5 = Random.Range(0, 2);
         randomhaz6 = Random.Range(0, 2);
 
-
-
-        //Debug.Log("hazard1 location:" + hz2.x +","+ hz2.y);
-
         Instantiate(hazards[randomhaz1], new Vector3(hz2.x, hz2.y, 0), Quaternion.identity);
         Instantiate(hazards[randomhaz2], new Vector3(hz3.x, hz3.y, 0), Quaternion.identity);
         Instantiate(hazards[randomhaz3], new Vector3(hz4.x, hz4.y, 0), Quaternion.identity);
