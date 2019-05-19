@@ -17,6 +17,7 @@ public class Progression : MonoBehaviour
 
     public State m_State;
     float m_Delay;
+    int m_DeadFrames = 0;
 
     public enum State
     {
@@ -79,14 +80,19 @@ public class Progression : MonoBehaviour
             case State.Playing:
                 if (m_BoulderRenderer)
                 {
-                    if (!m_BoulderRenderer.isVisible)
+                    ++m_DeadFrames;
+                    if (m_BoulderRenderer.isVisible)
                     {
-                        m_State = State.GameOver;
+                        m_DeadFrames = 0;                        
+                    }
+                }
+                if (m_DeadFrames > 5)
+                {
+                    m_State = State.GameOver;
 
-                        if (m_RestartUI)
-                        {
-                            m_RestartUI.gameObject.SetActive(true);
-                        }
+                    if (m_RestartUI)
+                    {
+                        m_RestartUI.gameObject.SetActive(true);
                     }
                 }
                 break;
