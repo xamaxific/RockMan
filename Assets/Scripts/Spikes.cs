@@ -23,8 +23,9 @@ public class Spikes : MonoBehaviour
     {
     }
 
-    private void OnDisable()
+    private void OnDestroy()
     {
+        s_Spikes.Remove(this);
     }
 
     void OnTriggerEnter2D(Collider2D other)
