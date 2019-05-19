@@ -426,13 +426,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 228231765}
-  m_LocalRotation: {x: -0, y: -0, z: 0.0030632676, w: 0.99999535}
-  m_LocalPosition: {x: -51.82, y: -41.51, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.004625145, w: 0.99998933}
+  m_LocalPosition: {x: -51.84, y: -41.57, z: 0}
   m_LocalScale: {x: -4.45, y: 15.066, z: 1}
   m_Children: []
   m_Father: {fileID: 1486263404}
   m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.351}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.53}
 --- !u!61 &228231767
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1126,13 +1126,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501596215}
-  m_LocalRotation: {x: -0, y: -0, z: 0.46491426, w: 0.8853557}
-  m_LocalPosition: {x: -31.91, y: -32.68, z: -0.32651198}
+  m_LocalRotation: {x: -0, y: -0, z: -0.47329125, w: 0.88090605}
+  m_LocalPosition: {x: -33.55, y: -32.66, z: -0.32651198}
   m_LocalScale: {x: 3.9286802, y: -5.5587835, z: 0.74722195}
   m_Children: []
   m_Father: {fileID: 1486263404}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 55.409004}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -56.496002}
 --- !u!212 &501596217
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1393,7 +1393,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 574785871}
   m_LocalRotation: {x: -0, y: -0, z: -0.063048355, w: 0.9980105}
-  m_LocalPosition: {x: 15.18, y: 3.44, z: 0}
+  m_LocalPosition: {x: 14.93, y: 2.7, z: 0}
   m_LocalScale: {x: 2, y: 1.4753, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1790,7 +1790,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721394298}
   m_LocalRotation: {x: -0, y: -0, z: 0.059394997, w: 0.99823457}
-  m_LocalPosition: {x: 27.45, y: 7.51, z: 0}
+  m_LocalPosition: {x: 27.48, y: 7.42, z: 0}
   m_LocalScale: {x: 4.5432, y: 3.3512914, z: 2.2716}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1996,7 +1996,7 @@ PrefabInstance:
     - target: {fileID: 5049466075950197548, guid: 99196a8c5733a92478cc900a02c2a516,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5049466075950197552, guid: 99196a8c5733a92478cc900a02c2a516,
         type: 3}
@@ -2106,12 +2106,12 @@ PrefabInstance:
     - target: {fileID: 2768015058702993210, guid: 99196a8c5733a92478cc900a02c2a516,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 0.193
       objectReference: {fileID: 0}
     - target: {fileID: 2768015058702993210, guid: 99196a8c5733a92478cc900a02c2a516,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99196a8c5733a92478cc900a02c2a516, type: 3}
@@ -2684,7 +2684,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031153854}
   m_LocalRotation: {x: -0, y: -0, z: -0.012554118, w: 0.99992126}
-  m_LocalPosition: {x: 30.78, y: 5.11, z: 0}
+  m_LocalPosition: {x: 30.94, y: 5.29, z: 0}
   m_LocalScale: {x: 2.9766932, y: 2.9766932, z: 2.9766932}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5079,7 +5079,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1882227893}
   m_LocalRotation: {x: -0, y: -0, z: 0.052424375, w: 0.9986249}
-  m_LocalPosition: {x: 24.14, y: 3.87, z: 0}
+  m_LocalPosition: {x: 21.55, y: 4.49, z: 0}
   m_LocalScale: {x: 1.2185198, y: 1.2185198, z: 1.2185198}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5732,8 +5732,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2039436770}
   m_LocalRotation: {x: -0, y: -0, z: -0.08396681, w: 0.99646854}
-  m_LocalPosition: {x: -30.39, y: -31.87, z: -0.32651198}
-  m_LocalScale: {x: 7.955093, y: -2.6000984, z: 0.74722195}
+  m_LocalPosition: {x: -30.45, y: -32.24, z: -0.32651198}
+  m_LocalScale: {x: 7.955093, y: -3.7059202, z: 0.74722195}
   m_Children: []
   m_Father: {fileID: 1486263404}
   m_RootOrder: 16
