@@ -617,7 +617,7 @@ PrefabInstance:
     - target: {fileID: 6092338806576043452, guid: 9e685bef1cacc67438f6e56d1fbabb99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6092338806576043452, guid: 9e685bef1cacc67438f6e56d1fbabb99,
         type: 3}
@@ -2040,7 +2040,7 @@ PrefabInstance:
     - target: {fileID: 6092338806576043452, guid: 9e685bef1cacc67438f6e56d1fbabb99,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6092338806576043452, guid: 9e685bef1cacc67438f6e56d1fbabb99,
         type: 3}
@@ -3189,6 +3189,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CurseBox (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6092338806576043455, guid: 9e685bef1cacc67438f6e56d1fbabb99,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6092338806576043452, guid: 9e685bef1cacc67438f6e56d1fbabb99,
         type: 3}
@@ -5702,7 +5707,7 @@ PrefabInstance:
     - target: {fileID: 4956565784141452281, guid: 50c90597977dee04d9e1a0ff0e68fd73,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4956565784141452281, guid: 50c90597977dee04d9e1a0ff0e68fd73,
         type: 3}
@@ -6689,7 +6694,7 @@ PrefabInstance:
     - target: {fileID: 8743450743563061784, guid: 9cfaaa23b688ee4409227ddd7a0e3c2d,
         type: 3}
       propertyPath: m_MaxBoulderMass
-      value: 1
+      value: 0.8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cfaaa23b688ee4409227ddd7a0e3c2d, type: 3}
@@ -6855,7 +6860,7 @@ PrefabInstance:
     - target: {fileID: 3315195818006694543, guid: 38668d6746f71004582495e6ded93d16,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 3315195818006694543, guid: 38668d6746f71004582495e6ded93d16,
         type: 3}
