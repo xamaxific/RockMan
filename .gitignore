@@ -5,3 +5,6 @@ Logs/
 RockMan.csproj
 RockMan.Editor.csproj
 RockMan.sln
+Assembly-CSharp-Editor.csproj
+Assembly-CSharp.csproj
+Puppet2D.csproj
