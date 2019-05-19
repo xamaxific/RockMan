@@ -26,12 +26,21 @@ public class RunAnimSpeedSetter : MonoBehaviour
         // determine speed
         Vector3 pos = transform.position;
         float speed = Mathf.Min(Mathf.Abs(pos.x - m_LastPos.x) * m_SpeedScale, m_MaxSpeed);
+        //sam edit
+        float dir = Vector3.Normalize( pos - m_LastPos ).x;
+        Debug.Log( dir );
+        if ( dir > 0 ) {
+            dir = 1;
+        } else if ( dir < 0 ) {
+            dir = -1;
+        }
         m_LastPos = pos;
+        //end sam edit
 
         // feed the animator
         if (m_Animator != null)
         {
-            m_Animator.SetFloat("runSpeed", speed);
+            m_Animator.SetFloat("runSpeed", speed * dir);
         }
     }
 }
