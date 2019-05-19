@@ -5,3 +5,4 @@ Logs/
 RockMan.csproj
 RockMan.Editor.csproj
 RockMan.sln
+build/
