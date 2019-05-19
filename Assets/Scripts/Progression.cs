@@ -18,6 +18,7 @@ public class Progression : MonoBehaviour
     public State m_State;
     float m_Delay;
     int m_DeadFrames = 0;
+    float m_InitialY;
 
     public enum State
     {
@@ -66,6 +67,10 @@ public class Progression : MonoBehaviour
                 {
                     m_State = State.Playing;
                     enablePusher = true;
+                    if (m_BoulderRBody)
+                    {
+                        m_InitialY = m_BoulderRBody.position.y;
+                    }                    
                 }
                 else
                 {
@@ -86,7 +91,9 @@ public class Progression : MonoBehaviour
                         m_DeadFrames = 0;                        
                     }
                 }
-                if (m_DeadFrames > 5)
+                float offAmount = (m_BoulderRBody != null) ? (m_InitialY - m_BoulderRBody.position.y) : 0f;
+                bool offScreen = (m_DeadFrames > 5);
+                if (offScreen || (offAmount > 20f))                    
                 {
                     m_State = State.GameOver;
 
@@ -94,14 +101,16 @@ public class Progression : MonoBehaviour
                     {
                         m_RestartUI.gameObject.SetActive(true);
                     }
+
+                    if (offScreen && m_BoulderRBody)
+                    {
+                        m_BoulderRBody.simulated = false;
+                    }
                 }
                 break;
 
             case State.GameOver:
-                if (m_BoulderRBody)
-                {
-                    m_BoulderRBody.simulated = false;
-                }
+                
                 break;
         }
     }
