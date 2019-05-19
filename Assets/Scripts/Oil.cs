@@ -12,7 +12,7 @@ public class Oil : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        temp_mass = 5;
+        temp_mass = 2;
     }
 
     // Update is called once per frame
