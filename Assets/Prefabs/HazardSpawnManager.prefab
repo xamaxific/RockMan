@@ -44,9 +44,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1736340149188022339, guid: 554f401f78d353d48b586f1f669205d7, type: 3}
+  - {fileID: 6433771505378802856, guid: 664432e4d617d7648b30fcb8155616bd, type: 3}
+  - {fileID: 4282074130826887596, guid: 29954e83f8999944ca58d5cb379ed84a, type: 3}
   player: {fileID: 0}
   cp1: {fileID: 0}
   cp2: {fileID: 0}
